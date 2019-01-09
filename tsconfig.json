@@ -1,0 +1,49 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "ng-feature-toggle": [
+        "dist/ng-feature-toggle",
+        "dist/ng-feature-toggle"
+      ],
+      "ng-feature-toggle/*": [
+        "dist/ng-feature-toggle/*",
+        "dist/ng-feature-toggle/*"
+      ],
+      "feature-toggle": [
+        "dist/feature-toggle"
+      ],
+      "feature-toggle/*": [
+        "dist/feature-toggle/*"
+      ],
+      "feature-toggle-lib": [
+        "dist/feature-toggle-lib"
+      ],
+      "feature-toggle-lib/*": [
+        "dist/feature-toggle-lib/*"
+      ],
+      "feature-toggle-util": [
+        "dist/feature-toggle-util"
+      ],
+      "feature-toggle-util/*": [
+        "dist/feature-toggle-util/*"
+      ]
+    }
+  }
+}

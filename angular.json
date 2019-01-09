@@ -1,0 +1,106 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ng-feature-toggle": {
+      "root": "projects/ng-feature-toggle",
+      "sourceRoot": "projects/ng-feature-toggle/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-feature-toggle/tsconfig.lib.json",
+            "project": "projects/ng-feature-toggle/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-feature-toggle/src/test.ts",
+            "tsConfig": "projects/ng-feature-toggle/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-feature-toggle/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-feature-toggle/tsconfig.lib.json",
+              "projects/ng-feature-toggle/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ng-feature-toggle-e2e": {
+      "root": "e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "ng-feature-toggle:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ng-feature-toggle:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "feature-toggle-util": {
+      "root": "projects/feature-toggle-util",
+      "sourceRoot": "projects/feature-toggle-util/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/feature-toggle-util/tsconfig.lib.json",
+            "project": "projects/feature-toggle-util/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/feature-toggle-util/src/test.ts",
+            "tsConfig": "projects/feature-toggle-util/tsconfig.spec.json",
+            "karmaConfig": "projects/feature-toggle-util/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/feature-toggle-util/tsconfig.lib.json",
+              "projects/feature-toggle-util/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ng-feature-toggle"
+}

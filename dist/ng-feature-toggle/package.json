@@ -1,0 +1,22 @@
+{
+  "name": "ng-feature-toggle",
+  "version": "0.0.1",
+  "dependencies": {
+    "feature-toggle": "git+ssh://git@github.com/acnevyts/feature-toggle.git",
+    "tslib": "^1.9.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^7.0.0",
+    "@angular/core": "^7.0.0"
+  },
+  "main": "bundles/ng-feature-toggle.umd.js",
+  "module": "fesm5/ng-feature-toggle.js",
+  "es2015": "fesm2015/ng-feature-toggle.js",
+  "esm5": "esm5/ng-feature-toggle.js",
+  "esm2015": "esm2015/ng-feature-toggle.js",
+  "fesm5": "fesm5/ng-feature-toggle.js",
+  "fesm2015": "fesm2015/ng-feature-toggle.js",
+  "typings": "ng-feature-toggle.d.ts",
+  "metadata": "ng-feature-toggle.metadata.json",
+  "sideEffects": false
+}
